@@ -19,6 +19,7 @@ function init() {
   
   } else {
     localStorage.setItem("theme", "dark");
+    theme = "dark";
   }
 
 }
