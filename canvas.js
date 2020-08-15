@@ -66,7 +66,7 @@ class SnakeHead {
   }
 
   show() {
-    c.fillStyle = "darkgreen";
+    c.fillStyle = "green";
     c.fillRect(this.x, this.y, scale, scale);
   }
 
@@ -139,8 +139,8 @@ class SnakeBody {
   }
 
   show() {
-    c.fillStyle = "green";
-    c.fillRect(this.x, this.y, scale, scale);
+    c.fillStyle = "darkgreen";
+    c.fillRect(this.x + scale * 0.5/10, this.y + scale * 0.5/10, scale * 9/10, scale * 9/10);
   }
 
   addTail() {
