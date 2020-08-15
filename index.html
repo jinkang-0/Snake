@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="assets/snake_icon.png" type="image/x-icon">
+  <title>Snake</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- scripts -->
+  <script src="https://kit.fontawesome.com/bf5b084248.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+</head>
+<body class="dark" onload="init()">
+
+  <div class="container">
+
+    <i onclick="changeTheme()" id="theme-switch" class="fas fa-sun"></i>
+
+    <h1 id="win-text" style="display: none;">You Win!</h1>
+
+    <canvas id="screen"></canvas>
+
+  </div>
+  
+  <div class="sidebar">
+
+    <div class="scores">
+      <div>
+        <span id="score">0</span>
+        <i class="fas fa-apple-alt" style="color: red;"></i>
+      </div>
+
+      <div class="high-scores">
+        <span id="high-score">0</span>
+        <i class="fas fa-crown" style="color: yellow;"></i>
+      </div>
+    </div>
+    
+    <div id="inner-sidebar">
+      <span class="tab">Settings</span>
+      
+      <!-- frame rate setting -->
+      <div class="setting">
+        <h3>Frame Rate</h3>
+        <input onchange="updateSettings();" type="range" name="frameRate" id="frameRate" min="1" max="20" value="10">
+        <span id="frameRate-val">10</span>
+      </div>
+
+      <!-- world size setting -->
+      <div class="setting">
+        <h3>World Size</h3>
+        <input onchange="updateSettings();" type="range" name="worldSize" id="worldSize" min="5" max="10" value="8">
+        <span id="worldSize-val">16x16</span>
+      </div>
+
+      <!-- restart button -->
+      <div class="wrapper">
+        <button onclick="setup()" id="restart">Restart</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="canvas.js"></script>
+
+</body>
+</html>
