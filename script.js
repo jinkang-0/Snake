@@ -9,7 +9,7 @@ var worldSize = 16;
 
 function init() {
 
-  if (theme) {
+  if (theme == 'dark' || theme == 'light') {
 
     document.body.className = theme;
   
